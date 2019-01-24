@@ -3,14 +3,15 @@
 --- !u!1 &149058
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
   m_Component:
-  - 4: {fileID: 421728}
-  - 114: {fileID: 11434134}
-  - 114: {fileID: 11493618}
-  - 114: {fileID: 11459458}
+  - component: {fileID: 421728}
+  - component: {fileID: 11434134}
+  - component: {fileID: 11493618}
+  - component: {fileID: 11459458}
   m_Layer: 0
   m_Name: MagentaBase
   m_TagString: Untagged
@@ -20,21 +21,24 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &421728
 Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149058}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -14.9799995, y: .100000001, z: 25.1000004}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: -14.98, y: 0.1, z: 25.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11434134
 MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149058}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -42,35 +46,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: 1
-  ToSpawn: {fileID: 170374, guid: 64e7b0f7a4d6a9947a517efe1769db5b, type: 2}
+  ToSpawn: {fileID: 170374, guid: 64e7b0f7a4d6a9947a517efe1769db5b, type: 3}
   Number: 3
   SpawnInterval: 5
   StartSpawnAmount: 2
   SizeX: 9
-  SizeY: .100000001
+  SizeY: 0.1
   SizeZ: 9
   ClearRadius: 1
   ObstructingLayers:
     serializedVersion: 2
     m_Bits: 1
---- !u!114 &11459458
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8689d020cf1e1e4aa901f6f31b89a17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PickupSensor: {fileID: 11493618}
-  ScoreEffect: {fileID: 0}
 --- !u!114 &11493618
 MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149058}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -97,21 +89,24 @@ MonoBehaviour:
     m_Bits: 0
   TestLOSTargetsOnly: 0
   NumberOfRays: 1
-  MinimumVisibility: .5
+  MinimumVisibility: 0.5
   SensorRange: 2
   DetectsOnLayers:
     serializedVersion: 2
     m_Bits: 1
   SensorUpdateMode: 0
-  CheckInterval: .5
---- !u!1001 &100100000
-Prefab:
-  m_ObjectHideFlags: 1
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 149058}
-  m_IsPrefabParent: 1
+  CheckInterval: 0.5
+--- !u!114 &11459458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8689d020cf1e1e4aa901f6f31b89a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupSensor: {fileID: 11493618}
+  ScoreEffect: {fileID: 0}
