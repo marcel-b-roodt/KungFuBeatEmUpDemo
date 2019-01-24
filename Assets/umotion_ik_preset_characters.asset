@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1933887728, guid: 448d62fcada76fd4ab5702190add98fd, type: 3}
+  m_Name: umotion_ik_preset_characters
+  m_EditorClassIdentifier: 
+  GeneralSettings:
+    HandleSize: 5
+    ExtrudePoleHandles: 1
+  HumanIKHandsSetting:
+    Create: 1
+    LeftTargetPath: Armature/mixamorig_Hips/mixamorig_Spine/mixamorig_Spine1/mixamorig_Spine2/mixamorig_LeftShoulder/mixamorig_LeftArm/mixamorig_LeftForeArm/mixamorig_LeftHand
+    RightTargetPath: Armature/mixamorig_Hips/mixamorig_Spine/mixamorig_Spine1/mixamorig_Spine2/mixamorig_RightShoulder/mixamorig_RightArm/mixamorig_RightForeArm/mixamorig_RightHand
+    GenericTwistBoneMode: 0
+    PoleTarget: 1
+    ReferenceMode: 0
+    TargetRotationMode: 1
+  HumanIKFeetSetting:
+    Create: 1
+    LeftTargetPath: Armature/mixamorig_Hips/mixamorig_LeftUpLeg/mixamorig_LeftLeg/mixamorig_LeftFoot
+    RightTargetPath: Armature/mixamorig_Hips/mixamorig_RightUpLeg/mixamorig_RightLeg/mixamorig_RightFoot
+    GenericTwistBoneMode: 0
+    PoleTarget: 1
+    ReferenceMode: 0
+    TargetRotationMode: 1
+  CustomIKSettings: []
