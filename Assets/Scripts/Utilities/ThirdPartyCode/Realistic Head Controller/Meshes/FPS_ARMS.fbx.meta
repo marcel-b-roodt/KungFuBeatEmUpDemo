@@ -1,0 +1,2377 @@
+fileFormatVersion: 2
+guid: 192bef5fcb6f10b4d9a12ef79c384286
+timeCreated: 1489975234
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Arms_Low
+    100004: Camera
+    100006: CarryBone
+    100008: Chest
+    100010: Cylinder
+    100012: FCon1.L
+    100014: FCon1.R
+    100016: FCon2.L
+    100018: FCon2.R
+    100020: FCon3.L
+    100022: FCon3.R
+    100024: FCon4.L
+    100026: FCon4.R
+    100028: //RootNode
+    100030: Hand1.L
+    100032: Hand1.R
+    100034: Hand2.L
+    100036: Hand2.R
+    100038: Hand3.L
+    100040: Hand3.R
+    100042: Hand4.L
+    100044: Hand4.R
+    100046: HandIK.L
+    100048: HandIK.R
+    100050: HandRoot.L
+    100052: HandRoot.R
+    100054: Index1.L
+    100056: Index1.R
+    100058: Index2.L
+    100060: Index2.R
+    100062: Index3.L
+    100064: Index3.R
+    100066: Little1.L
+    100068: Little1.R
+    100070: Little2.L
+    100072: Little2.R
+    100074: Little3.L
+    100076: Little3.R
+    100078: LittleControl.L
+    100080: LittleControl.R
+    100082: LittleRoot.L
+    100084: LittleRoot.R
+    100086: LowerArm1.L
+    100088: LowerArm1.R
+    100090: LowerArm2.L
+    100092: LowerArm2.R
+    100094: LowerArmRoot.L
+    100096: LowerArmRoot.R
+    100098: Middle1.L
+    100100: Middle1.R
+    100102: Middle2.L
+    100104: Middle2.R
+    100106: Middle3.L
+    100108: Middle3.R
+    100110: Pole.L
+    100112: Pole.R
+    100114: Ring1.L
+    100116: Ring1.R
+    100118: Ring2.L
+    100120: Ring2.R
+    100122: Ring3.L
+    100124: Ring3.R
+    100126: RingRoot.L
+    100128: RingRoot.R
+    100130: Root
+    100132: Shoulder.L
+    100134: Shoulder.R
+    100136: Thumb1.L
+    100138: Thumb1.R
+    100140: Thumb2.L
+    100142: Thumb2.R
+    100144: Thumb3.L
+    100146: Thumb3.R
+    100148: UpperArm.L
+    100150: UpperArm.R
+    400000: Armature
+    400002: Arms_Low
+    400004: Camera
+    400006: CarryBone
+    400008: Chest
+    400010: Cylinder
+    400012: FCon1.L
+    400014: FCon1.R
+    400016: FCon2.L
+    400018: FCon2.R
+    400020: FCon3.L
+    400022: FCon3.R
+    400024: FCon4.L
+    400026: FCon4.R
+    400028: //RootNode
+    400030: Hand1.L
+    400032: Hand1.R
+    400034: Hand2.L
+    400036: Hand2.R
+    400038: Hand3.L
+    400040: Hand3.R
+    400042: Hand4.L
+    400044: Hand4.R
+    400046: HandIK.L
+    400048: HandIK.R
+    400050: HandRoot.L
+    400052: HandRoot.R
+    400054: Index1.L
+    400056: Index1.R
+    400058: Index2.L
+    400060: Index2.R
+    400062: Index3.L
+    400064: Index3.R
+    400066: Little1.L
+    400068: Little1.R
+    400070: Little2.L
+    400072: Little2.R
+    400074: Little3.L
+    400076: Little3.R
+    400078: LittleControl.L
+    400080: LittleControl.R
+    400082: LittleRoot.L
+    400084: LittleRoot.R
+    400086: LowerArm1.L
+    400088: LowerArm1.R
+    400090: LowerArm2.L
+    400092: LowerArm2.R
+    400094: LowerArmRoot.L
+    400096: LowerArmRoot.R
+    400098: Middle1.L
+    400100: Middle1.R
+    400102: Middle2.L
+    400104: Middle2.R
+    400106: Middle3.L
+    400108: Middle3.R
+    400110: Pole.L
+    400112: Pole.R
+    400114: Ring1.L
+    400116: Ring1.R
+    400118: Ring2.L
+    400120: Ring2.R
+    400122: Ring3.L
+    400124: Ring3.R
+    400126: RingRoot.L
+    400128: RingRoot.R
+    400130: Root
+    400132: Shoulder.L
+    400134: Shoulder.R
+    400136: Thumb1.L
+    400138: Thumb1.R
+    400140: Thumb2.L
+    400142: Thumb2.R
+    400144: Thumb3.L
+    400146: Thumb3.R
+    400148: UpperArm.L
+    400150: UpperArm.R
+    2300000: Cylinder
+    3300000: Cylinder
+    4300000: Cylinder
+    4300002: Arms_Low
+    7400000: Armature|Carry 1 Enter
+    7400002: Armature|Carry 1 Pose
+    7400004: Armature|Carry 2 Enter
+    7400006: Armature|Carry 2 Pose
+    7400008: Armature|Crawl
+    7400010: Armature|Guard2h
+    7400012: Armature|Guard_L
+    7400014: Armature|Guard_R
+    7400016: Armature|Push
+    7400018: Armature|Push Pose
+    7400020: Armature|Run
+    7400022: Armature|T-Pose
+    9500000: //RootNode
+    13700000: Arms_Low
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Carry 1 Enter
+      takeName: Armature|Carry 1 Enter
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Carry 1 Pose
+      takeName: Armature|Carry 1 Pose
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Carry 2 Enter
+      takeName: Armature|Carry 2 Enter
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Carry 2 Pose
+      takeName: Armature|Carry 2 Pose
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Crawl
+      takeName: Armature|Crawl
+      firstFrame: 0
+      lastFrame: 64
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Guard2h
+      takeName: Armature|Guard2h
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Guard_L
+      takeName: Armature|Guard_L
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Guard_R
+      takeName: Armature|Guard_R
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Push
+      takeName: Armature|Push
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Push Pose
+      takeName: Armature|Push Pose
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Run
+      takeName: Armature|Run
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|T-Pose
+      takeName: Armature|T-Pose
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/CarryBone
+        weight: 1
+      - path: Armature/Root/CarryBone/Cylinder
+        weight: 1
+      - path: Armature/Root/Chest
+        weight: 1
+      - path: Armature/Root/Chest/Camera
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.L
+        weight: 1
+      - path: Armature/Root/Chest/HandIK.R
+        weight: 1
+      - path: Armature/Root/Chest/Pole.L
+        weight: 1
+      - path: Armature/Root/Chest/Pole.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/FCon4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand1.L/LittleRoot.L/Little1.L/Little2.L/Little3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand2.L/RingRoot.L/Ring1.L/Ring2.L/Ring3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand3.L/Middle1.L/Middle2.L/Middle3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Hand4.L/Index1.L/Index2.L/Index3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/LittleControl.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/HandRoot.L/Thumb1.L/Thumb2.L/Thumb3.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm1.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.L/UpperArm.L/LowerArmRoot.L/LowerArm2.L
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/FCon4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand1.R/LittleRoot.R/Little1.R/Little2.R/Little3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand2.R/RingRoot.R/Ring1.R/Ring2.R/Ring3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand3.R/Middle1.R/Middle2.R/Middle3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Hand4.R/Index1.R/Index2.R/Index3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/LittleControl.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/HandRoot.R/Thumb1.R/Thumb2.R/Thumb3.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm1.R
+        weight: 1
+      - path: Armature/Root/Chest/Shoulder.R/UpperArm.R/LowerArmRoot.R/LowerArm2.R
+        weight: 1
+      - path: Arms_Low
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0250000004
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

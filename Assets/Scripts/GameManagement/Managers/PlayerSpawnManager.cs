@@ -7,7 +7,6 @@ public class PlayerSpawnManager : MonoBehaviour
 	public RoomTransitionID roomSpawnID;
 
 	public GameObject PlayerPrefab;
-	public GameObject PlayerCameraPrefab;
 
 	void Start()
 	{
@@ -46,18 +45,10 @@ public class PlayerSpawnManager : MonoBehaviour
 			if (transition.DoorID == roomSpawnID)
 			{
 				GameObject player = GameObject.FindGameObjectWithTag(Helpers.Tags.Player);
-				GameObject playerCamera = GameObject.FindGameObjectWithTag(Helpers.Tags.PlayerCamera);
 
 				if (!player)
 				{
 					player = GameObject.Instantiate(PlayerPrefab, transition.transform.position, transition.transform.rotation);
-				}
-
-				if (!playerCamera)
-				{
-					playerCamera = GameObject.Instantiate(PlayerCameraPrefab);
-					var cameraScript = playerCamera.GetComponent<PlayerCamera>();
-					cameraScript.FollowCharacter = player.GetComponent<PlayerMovementController>();
 				}
 
 				player.transform.position = transition.transform.position;

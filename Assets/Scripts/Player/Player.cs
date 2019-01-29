@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
 	private void Start()
 	{
-		playerCamera = GameObject.FindGameObjectWithTag(Helpers.Tags.PlayerCamera).GetComponent<PlayerCamera>();
+		playerCamera = GetComponentInChildren<PlayerCamera>();
 
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 
 		movementInputs.MoveAxisForward = Input.GetAxisRaw(InputCodes.VerticalInput);
 		movementInputs.MoveAxisRight = Input.GetAxisRaw(InputCodes.HorizontalInput);
-		movementInputs.CameraRotation = playerCamera.Transform.rotation;
+		movementInputs.CameraRotation = playerCamera.transform.rotation;
 		movementInputs.Walk = Input.GetButton(InputCodes.Walk);
 		movementInputs.Jump = Input.GetButtonDown(InputCodes.Jump);
 		movementInputs.JumpHold = Input.GetButton(InputCodes.Jump);
