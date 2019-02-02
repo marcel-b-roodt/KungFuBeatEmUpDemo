@@ -17,6 +17,7 @@ public class PlayerMovementController : BaseCharacterController
 	public float MaxStableCrouchWalkSpeed = 2f;
 	public float StableMovementSharpness = 12;
 	public float OrientationSharpness = 12;
+	public float WalkSpeedPercentage = 0.5f;
 
 	[Header("Air Movement")]
 	public float MaxAirMoveSpeed = 6f;
@@ -31,7 +32,8 @@ public class PlayerMovementController : BaseCharacterController
 	public float JumpRecoveryTime = 0.05f;
 
 	[Header("Sliding")]
-	public float SlideVelocityThreshold = 3f;
+	public float SlideVelocityThreshold = 2f;
+	public float SlideRotationSpeed = 1.5f;
 	public float SlideSpeed = 10f;
 	public float MaxSlideTime = 0.6f;
 	public float StoppedTime = 0.3f;
@@ -55,6 +57,7 @@ public class PlayerMovementController : BaseCharacterController
 	public float TimeSinceEnteringState { get { return Time.time - TimeEnteredState; } }
 
 	private Vector3 _currentSlideVelocity;
+	private bool _startedSlide;
 	private bool _isSlideStopped;
 	private float _timeSinceStartedSlide = 0;
 	private float _timeSinceStopped = 0;
@@ -121,6 +124,7 @@ public class PlayerMovementController : BaseCharacterController
 				{
 					//TODO: Make slide speed a velocity curve
 					_currentSlideVelocity = _moveInputVector * SlideSpeed;
+					_startedSlide = true;
 					_isSlideStopped = false;
 					_timeSinceStartedSlide = 0f;
 					_timeSinceStopped = 0f;
@@ -163,7 +167,7 @@ public class PlayerMovementController : BaseCharacterController
 
 		// Clamp input
 		Vector3 moveInputVector = new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward).normalized;
-		playerAnimationManager.SetMovement(inputs.Walk ? moveInputVector.magnitude / 2 : moveInputVector.magnitude);
+		playerAnimationManager.SetMovement(inputs.Walk ? moveInputVector.magnitude * WalkSpeedPercentage : moveInputVector.magnitude);
 
 		// Calculate camera direction and rotation on the character plane
 		Vector3 cameraPlanarDirection = Vector3.ProjectOnPlane(inputs.CameraRotation * Vector3.forward, Motor.CharacterUp).normalized;
@@ -205,6 +209,13 @@ public class PlayerMovementController : BaseCharacterController
 							TransitionToState(PlayerMovementState.Sliding);
 						}
 					}
+
+					break;
+				}
+			case PlayerMovementState.Sliding:
+				{
+					// Move and look inputs
+					_moveInputVector = cameraPlanarRotation * moveInputVector;
 
 					break;
 				}
@@ -402,8 +413,26 @@ public class PlayerMovementController : BaseCharacterController
 					}
 					else
 					{
+						Vector3 effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
+
+						// Calculate target velocity
+						//bool movingForward = _bufferedInputs.MoveAxisForward > 0;
+						Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
+						Vector3 reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized * _moveInputVector.magnitude;
+
 						// When sliding, velocity is always constant
-						currentVelocity = _currentSlideVelocity;
+						if (_startedSlide)
+						{
+							currentVelocity = _currentSlideVelocity;
+							_startedSlide = false;
+						}
+
+						if (reorientedInput.magnitude > 0)
+							//TODO: Fix this
+							currentVelocity = Vector3.RotateTowards(currentVelocity, currentVelocity.magnitude * reorientedInput.normalized, Mathf.Deg2Rad * SlideRotationSpeed, currentVelocity.magnitude);
+							currentVelocity = Vector3.Lerp(currentVelocity, currentVelocity.magnitude * reorientedInput.normalized, 1 - Mathf.Exp(-SlideRotationSpeed * deltaTime));
+
+						currentVelocity = Vector3.Lerp(currentVelocity, Vector3.zero, 0.01f);
 					}
 					break;
 				}
