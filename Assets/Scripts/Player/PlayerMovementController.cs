@@ -33,7 +33,7 @@ public class PlayerMovementController : BaseCharacterController
 
 	[Header("Sliding")]
 	public float SlideVelocityThreshold = 2f;
-	public float SlideRotationSpeed = 1.5f;
+	public float SlideRotationSpeed = 1.25f;
 	public float SlideSpeed = 10f;
 	public float MaxSlideTime = 0.6f;
 	public float StoppedTime = 0.3f;
@@ -428,9 +428,12 @@ public class PlayerMovementController : BaseCharacterController
 						}
 
 						if (reorientedInput.magnitude > 0)
+						{
 							//TODO: Fix this
 							currentVelocity = Vector3.RotateTowards(currentVelocity, currentVelocity.magnitude * reorientedInput.normalized, Mathf.Deg2Rad * SlideRotationSpeed, currentVelocity.magnitude);
 							currentVelocity = Vector3.Lerp(currentVelocity, currentVelocity.magnitude * reorientedInput.normalized, 1 - Mathf.Exp(-SlideRotationSpeed * deltaTime));
+						}
+							
 
 						currentVelocity = Vector3.Lerp(currentVelocity, Vector3.zero, 0.01f);
 					}
@@ -479,8 +482,12 @@ public class PlayerMovementController : BaseCharacterController
 						}
 					}
 
+					if (!_bufferedInputs.CrouchHold && _shouldBeCrouching)
+						HandleCrouching();
+
 					// Handle uncrouching
 					HandleUncrouching();
+
 					break;
 				}
 			case PlayerMovementState.Sliding:
@@ -607,7 +614,6 @@ public class PlayerMovementController : BaseCharacterController
 			if (!_isCrouching)
 			{
 				RHC_EventManager.PSVO_ChangeStanceState(RHC_EventManager.StanceState.Crouching);
-				//CameraFollowPoint.localPosition = new Vector3(0, 0.75f, 0);
 				_isCrouching = true;
 				SetCrouchingDimensions();
 				playerAnimationManager.SetCrouch(true);
@@ -643,7 +649,6 @@ public class PlayerMovementController : BaseCharacterController
 			{
 				// If no obstructions, uncrouch
 				RHC_EventManager.PSVO_ChangeStanceState(RHC_EventManager.StanceState.Standing);
-				//CameraFollowPoint.localPosition = new Vector3(0, 1.5f, 0);
 				_isCrouching = false;
 				playerAnimationManager.SetCrouch(false);
 			}

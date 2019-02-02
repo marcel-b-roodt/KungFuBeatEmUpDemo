@@ -194,6 +194,7 @@ MonoBehaviour:
   MaxStableCrouchWalkSpeed: 2
   StableMovementSharpness: 12
   OrientationSharpness: 12
+  WalkSpeedPercentage: 0.5
   MaxAirMoveSpeed: 6
   AirAccelerationSpeed: 3
   Drag: 0.1
@@ -202,7 +203,8 @@ MonoBehaviour:
   JumpPreGroundingGraceTime: 0
   JumpPostGroundingGraceTime: 0
   JumpRecoveryTime: 0.05
-  SlideVelocityThreshold: 3
+  SlideVelocityThreshold: 2
+  SlideRotationSpeed: 1.25
   SlideSpeed: 10
   MaxSlideTime: 0.6
   StoppedTime: 0.3
@@ -423,7 +425,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!114 &114063822240753302
 MonoBehaviour:
   m_ObjectHideFlags: 0

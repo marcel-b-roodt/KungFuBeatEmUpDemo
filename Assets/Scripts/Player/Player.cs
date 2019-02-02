@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
 		movementInputs.Jump = Input.GetButtonDown(InputCodes.Jump);
 		movementInputs.JumpHold = Input.GetButton(InputCodes.Jump);
 		movementInputs.Crouch = Input.GetButtonDown(InputCodes.Crouch);
+		movementInputs.CrouchHold = Input.GetButton(InputCodes.Crouch);
 		movementInputs.Slide = Input.GetButtonDown(InputCodes.Slide);
 		movementInputs.SlideHold = Input.GetButton(InputCodes.Slide);
 
@@ -86,6 +87,7 @@ public class Player : MonoBehaviour
 		public bool Jump;
 		public bool JumpHold;
 		public bool Crouch;
+		public bool CrouchHold;
 		public bool Slide;
 		public bool SlideHold;
 	}
