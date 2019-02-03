@@ -6,7 +6,13 @@ public enum PlayerMovementState
 {
 	Default,
 	Sliding,
-	JumpKicking,
+}
+
+public enum FallRecoveryStatus
+{
+	Default,
+	Recovering,
+	CrouchRecovering
 }
 
 public class PlayerMovementController : BaseCharacterController
@@ -27,10 +33,13 @@ public class PlayerMovementController : BaseCharacterController
 
 	[Header("Jumping")]
 	public bool AllowJumpingWhenSliding = true;
-	public float JumpSpeed = 6f;
+	public const float JumpHeight = 1.3f;
 	public float JumpPreGroundingGraceTime = 0f;
 	public float JumpPostGroundingGraceTime = 0f;
-	public float JumpRecoveryTime = 0.05f;
+	public float FallRecoveryThreshold = 2.3f * JumpHeight;
+	public float FallCrouchRecoveryThreshold = 2.6f * JumpHeight;
+	public float FallRecoveryTime = 0.15f;
+	public float FallCrouchRecoveryTime = 0.25f;
 
 	[Header("Sliding")]
 	public float SlideVelocityThreshold = 2f;
@@ -61,28 +70,26 @@ public class PlayerMovementController : BaseCharacterController
 	private bool _jumpRequested = false;
 	private bool _jumpConsumed = false;
 	private bool _jumpedThisFrame = false;
-	private bool _mustRecoverFromJump = false;
+	private FallRecoveryStatus _fallRecoveryStatus = FallRecoveryStatus.Default;
 	private float _jumpStartYPosition = 0f;
 	private float _timeSinceJumpRequested = Mathf.Infinity;
 	private float _timeSinceLastAbleToJump = 0f;
-	private float _timeSinceLastLanded = Mathf.Infinity;
+	private float _fallRecoveryTime = Mathf.Infinity;
 	private Vector3 _internalVelocityAdd = Vector3.zero;
 	private bool _shouldBeCrouching = false;
 	private bool _isCrouching = false;
 	private bool _isWalking = false;
 
-	private Vector3 lastInnerNormal = Vector3.zero;
-	private Vector3 lastOuterNormal = Vector3.zero;
+	private Player.PlayerInputs _bufferedInputs;
 
-	private Player.PlayerMovementInputs _bufferedMovementInputs;
-	private Player.PlayerInteractionInputs _bufferedInteractionInputs;
-
+	private PlayerAttackController playerAttackController;
 	private PlayerAnimationManager playerAnimationManager;
 
 	public bool IsGrounded { get { return Motor.GroundingStatus.IsStableOnGround; } }
 
 	private void Start()
 	{
+		playerAttackController = GetComponent<PlayerAttackController>();
 		playerAnimationManager = GetComponent<PlayerAnimationManager>();
 
 		TransitionToState(PlayerMovementState.Default);
@@ -91,9 +98,6 @@ public class PlayerMovementController : BaseCharacterController
 			IgnoredColliders = new List<Collider>();
 	}
 
-	/// <summary>
-	/// Handles movement state transitions and enter/exit callbacks
-	/// </summary>
 	public void TransitionToState(PlayerMovementState newState)
 	{
 		PreviousCharacterState = CurrentPlayerState;
@@ -103,9 +107,6 @@ public class PlayerMovementController : BaseCharacterController
 		OnStateEnter(newState, PreviousCharacterState);
 	}
 
-	/// <summary>
-	/// Event when entering a state
-	/// </summary>
 	public void OnStateEnter(PlayerMovementState state, PlayerMovementState fromState)
 	{
 		switch (state)
@@ -129,9 +130,6 @@ public class PlayerMovementController : BaseCharacterController
 		}
 	}
 
-	/// <summary>
-	/// Event when exiting a state
-	/// </summary>
 	public void OnStateExit(PlayerMovementState state, PlayerMovementState toState)
 	{
 		switch (state)
@@ -142,7 +140,7 @@ public class PlayerMovementController : BaseCharacterController
 				}
 			case PlayerMovementState.Sliding:
 				{
-					if (!Motor.GroundingStatus.IsStableOnGround || !_bufferedMovementInputs.CrouchHold)
+					if (!Motor.GroundingStatus.IsStableOnGround || !_bufferedInputs.CrouchHold)
 						HandleCrouching();
 
 					playerAnimationManager.SetSlide(false);
@@ -154,9 +152,9 @@ public class PlayerMovementController : BaseCharacterController
 	/// <summary>
 	/// This is called every frame by PlayerController in order to tell the character what its inputs are
 	/// </summary>
-	public void SetMovementInputs(ref Player.PlayerMovementInputs inputs)
+	public void SetInputs(ref Player.PlayerInputs inputs)
 	{
-		_bufferedMovementInputs = inputs;
+		_bufferedInputs = inputs;
 
 		// Clamp input
 		Vector3 moveInputVector = new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward).normalized;
@@ -212,29 +210,8 @@ public class PlayerMovementController : BaseCharacterController
 					break;
 				}
 		}
-	}
 
-	/// <summary>
-	/// This is called every frame by PlayerController in order to tell the character what its inputs are
-	/// </summary>
-	public void SetInteractionInputs(ref Player.PlayerInteractionInputs inputs)
-	{
-		_bufferedInteractionInputs = inputs;
-
-		// Handle state transition from input
-		switch (CurrentPlayerState)
-		{
-			case PlayerMovementState.Default:
-				{
-					break;
-				}
-			case PlayerMovementState.Sliding:
-				{
-					if (TimeSinceEnteringState <= SlideAttackAllowanceTime)
-						//Do attack
-					break;
-				}
-		}
+		playerAttackController.SetInputs(ref inputs);
 	}
 
 	/// <summary>
@@ -243,15 +220,13 @@ public class PlayerMovementController : BaseCharacterController
 	/// </summary>
 	public override void BeforeCharacterUpdate(float deltaTime)
 	{
-		//playerAnimationManager.SetIsGrounded(Motor.GroundingStatus.IsStableOnGround);
-
 		switch (CurrentPlayerState)
 		{
 			case PlayerMovementState.Default:
 				{
-					if (_mustRecoverFromJump)
+					if (_fallRecoveryStatus != FallRecoveryStatus.Default)
 					{
-						_timeSinceLastLanded += deltaTime;
+						_fallRecoveryTime += deltaTime;
 					}
 					break;
 				}
@@ -265,6 +240,8 @@ public class PlayerMovementController : BaseCharacterController
 					break;
 				}
 		}
+
+		playerAttackController.BeforeCharacterUpdate(deltaTime);
 	}
 
 	/// <summary>
@@ -309,7 +286,7 @@ public class PlayerMovementController : BaseCharacterController
 				{
 					Vector3 targetMovementVelocity = Vector3.zero;
 
-					if (_mustRecoverFromJump)
+					if (_fallRecoveryStatus != FallRecoveryStatus.Default)
 					{
 						_moveInputVector = Vector3.zero;
 						_jumpRequested = false;
@@ -394,11 +371,10 @@ public class PlayerMovementController : BaseCharacterController
 							}
 
 							// Makes the character skip ground probing/snapping on its next update. 
-							// If this line weren't here, the character would remain snapped to the ground when trying to jump. Try commenting this line out and see.
 							Motor.ForceUnground();
 
 							// Add to the return velocity and reset jump state
-							currentVelocity += (jumpDirection * JumpSpeed) - Vector3.Project(currentVelocity, Motor.CharacterUp);
+							currentVelocity += (jumpDirection * CalculateJumpSpeed(JumpHeight, Gravity.magnitude)) - Vector3.Project(currentVelocity, Motor.CharacterUp);
 							_jumpRequested = false;
 							_jumpConsumed = true;
 							_jumpedThisFrame = true;
@@ -482,6 +458,7 @@ public class PlayerMovementController : BaseCharacterController
 								if (_shouldBeCrouching)
 									HandleCrouching();
 							}
+
 							_timeSinceLastAbleToJump = 0f;
 						}
 						else
@@ -490,14 +467,23 @@ public class PlayerMovementController : BaseCharacterController
 							_timeSinceLastAbleToJump += deltaTime;
 						}
 
-						if (_mustRecoverFromJump)
+						if (_fallRecoveryStatus != FallRecoveryStatus.Default)
 						{
-							if (_timeSinceLastLanded >= JumpRecoveryTime)
-								_mustRecoverFromJump = false;
+							switch (_fallRecoveryStatus)
+							{
+								case FallRecoveryStatus.Recovering:
+									if (_fallRecoveryTime >= FallRecoveryTime)
+										_fallRecoveryStatus = FallRecoveryStatus.Default;
+									break;
+								case FallRecoveryStatus.CrouchRecovering:
+									if (_fallRecoveryTime >= FallCrouchRecoveryTime)
+										_fallRecoveryStatus = FallRecoveryStatus.Default;
+									break;
+							}
 						}
 					}
 
-					if (!_bufferedMovementInputs.CrouchHold && _shouldBeCrouching)
+					if (!_bufferedInputs.CrouchHold && _shouldBeCrouching)
 						HandleCrouching();
 
 					// Handle uncrouching
@@ -521,6 +507,8 @@ public class PlayerMovementController : BaseCharacterController
 					break;
 				}
 		}
+
+		playerAttackController.AfterCharacterUpdate(deltaTime);
 	}
 
 	public override void PostGroundingUpdate(float deltaTime)
@@ -552,7 +540,7 @@ public class PlayerMovementController : BaseCharacterController
 
 	public override void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, ref HitStabilityReport hitStabilityReport)
 	{
-		
+		playerAttackController.OnGroundHit();
 	}
 
 	public override void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, ref HitStabilityReport hitStabilityReport)
@@ -569,6 +557,8 @@ public class PlayerMovementController : BaseCharacterController
 					break;
 				}
 		}
+
+		playerAttackController.OnMovementHit();
 	}
 
 	public void AddVelocity(Vector3 velocity)
@@ -593,18 +583,31 @@ public class PlayerMovementController : BaseCharacterController
 		{
 			case PlayerMovementState.Default:
 				{
-					if (transform.position.y - _jumpStartYPosition <= 0)
-					{
-						_timeSinceLastLanded = 0f;
-						_mustRecoverFromJump = true;
+					var fallHeight = _jumpStartYPosition - transform.position.y;
+					_fallRecoveryTime = 0f;
 
-						if (_bufferedMovementInputs.CrouchHold)
+					if (fallHeight >= FallRecoveryThreshold)
+					{
+						if (fallHeight >= FallCrouchRecoveryThreshold)
+						{
+							_fallRecoveryStatus = FallRecoveryStatus.CrouchRecovering;
+							RHC_EventManager.PSVO_ChangeStanceState(RHC_EventManager.StanceState.CrouchRecovering);
+						}
+						else
+						{
+							_fallRecoveryStatus = FallRecoveryStatus.Recovering;
+							RHC_EventManager.PSVO_ChangeStanceState(RHC_EventManager.StanceState.Recovering);
+						}
+
+						if (_bufferedInputs.CrouchHold)
 							HandleCrouching();
 					}
 
 					break;
 				}
 		}
+
+		playerAttackController.OnLanded();
 	}
 
 	protected void OnLeaveStableGround()
@@ -622,6 +625,8 @@ public class PlayerMovementController : BaseCharacterController
 					break;
 				}
 		}
+
+		playerAttackController.OnLeaveStableGround();
 	}
 
 	private bool HandleCrouching()
@@ -672,6 +677,11 @@ public class PlayerMovementController : BaseCharacterController
 				playerAnimationManager.SetCrouch(false);
 			}
 		}
+	}
+
+	private float CalculateJumpSpeed(float jumpHeight, float gravity)
+	{
+		return Mathf.Sqrt(2 * jumpHeight * gravity);
 	}
 
 	private void SetCrouchingDimensions()

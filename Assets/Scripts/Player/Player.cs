@@ -30,8 +30,7 @@ public class Player : MonoBehaviour
 		}
 
 		HandleCameraInput();
-		HandleMovementInput();
-		HandleInteractionInput();
+		HandleInputs();
 	}
 
 	private void HandleCameraInput()
@@ -51,37 +50,30 @@ public class Player : MonoBehaviour
 		playerCamera.UpdateWithInput(Time.deltaTime, playerController.ZoomLevelFromMovementState, lookInputVector);
 	}
 
-	private void HandleMovementInput()
+	private void HandleInputs()
 	{
-		PlayerMovementInputs movementInputs = new PlayerMovementInputs();
+		PlayerInputs inputs = new PlayerInputs();
 
-		movementInputs.MoveAxisForward = Input.GetAxisRaw(InputCodes.VerticalInput);
-		movementInputs.MoveAxisRight = Input.GetAxisRaw(InputCodes.HorizontalInput);
-		movementInputs.CameraRotation = playerCamera.transform.rotation;
-		movementInputs.Walk = Input.GetButton(InputCodes.Walk);
-		movementInputs.Jump = Input.GetButtonDown(InputCodes.Jump);
-		movementInputs.JumpHold = Input.GetButton(InputCodes.Jump);
-		movementInputs.Crouch = Input.GetButtonDown(InputCodes.Crouch);
-		movementInputs.CrouchHold = Input.GetButton(InputCodes.Crouch);
+		inputs.MoveAxisForward = Input.GetAxisRaw(InputCodes.VerticalInput);
+		inputs.MoveAxisRight = Input.GetAxisRaw(InputCodes.HorizontalInput);
+		inputs.CameraRotation = playerCamera.transform.rotation;
+		inputs.Walk = Input.GetButton(InputCodes.Walk);
+		inputs.Jump = Input.GetButtonDown(InputCodes.Jump);
+		inputs.JumpHold = Input.GetButton(InputCodes.Jump);
+		inputs.Crouch = Input.GetButtonDown(InputCodes.Crouch);
+		inputs.CrouchHold = Input.GetButton(InputCodes.Crouch);
 
-		playerController.SetMovementInputs(ref movementInputs);
+		inputs.PrimaryFire = Input.GetButtonDown(InputCodes.PrimaryFire);
+		inputs.PrimaryFireHold = Input.GetButtonDown(InputCodes.PrimaryFire);
+		inputs.SecondaryFire = Input.GetButtonDown(InputCodes.SecondaryFire);
+		inputs.SecondaryFireHold = Input.GetButtonDown(InputCodes.SecondaryFire);
+		inputs.Interact = Input.GetButtonDown(InputCodes.Interact);
+		inputs.InteractHold = Input.GetButtonDown(InputCodes.Interact);
+
+		playerController.SetInputs(ref inputs);
 	}
 
-	private void HandleInteractionInput()
-	{
-		PlayerInteractionInputs interactionInputs = new PlayerInteractionInputs();
-
-		interactionInputs.PrimaryFire = Input.GetButtonDown(InputCodes.PrimaryFire);
-		interactionInputs.PrimaryFireHold = Input.GetButtonDown(InputCodes.PrimaryFire);
-		interactionInputs.SecondaryFire = Input.GetButtonDown(InputCodes.SecondaryFire);
-		interactionInputs.SecondaryFireHold = Input.GetButtonDown(InputCodes.SecondaryFire);
-		interactionInputs.Interact = Input.GetButtonDown(InputCodes.Interact);
-		interactionInputs.InteractHold = Input.GetButtonDown(InputCodes.Interact);
-
-		playerController.SetInteractionInputs(ref interactionInputs);
-	}
-
-	public struct PlayerMovementInputs
+	public struct PlayerInputs
 	{
 		public float MoveAxisRight;
 		public float MoveAxisForward;
@@ -91,10 +83,7 @@ public class Player : MonoBehaviour
 		public bool JumpHold;
 		public bool Crouch;
 		public bool CrouchHold;
-	}
 
-	public struct PlayerInteractionInputs
-	{
 		public bool PrimaryFire;
 		public bool PrimaryFireHold;
 		public bool SecondaryFire;

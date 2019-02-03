@@ -10,7 +10,7 @@ public class PlayerAttackManager : MonoBehaviour
 	public static float BasicAttackStaggerTime = 0.2f;
 	#endregion
 
-	PlayerAttackStateMachine playerAttackStateMachine;
+	PlayerAttackController playerAttackController;
 	PlayerSoundManager playerSoundManager;
 
 	SphereCollider playerHitbox;
@@ -19,7 +19,7 @@ public class PlayerAttackManager : MonoBehaviour
 
 	void Awake()
 	{
-		playerAttackStateMachine = GetComponentInParent<PlayerAttackStateMachine>();
+		playerAttackController = GetComponentInParent<PlayerAttackController>();
 		playerSoundManager = GetComponentInParent<PlayerSoundManager>();
 		playerHitbox = GameObject.FindGameObjectWithTag(Helpers.Tags.PlayerHitbox).GetComponent<SphereCollider>();
 	}

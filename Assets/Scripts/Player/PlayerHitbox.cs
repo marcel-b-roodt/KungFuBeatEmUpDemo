@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class PlayerHitbox : MonoBehaviour
 {
-	PlayerAttackStateMachine playerController;
+	PlayerAttackController playerAttackController;
 	PlayerAttackManager playerAttackManager;
 
 	void Start()
 	{
-		playerController = GetComponentInParent<PlayerAttackStateMachine>();
+		playerAttackController = GetComponentInParent<PlayerAttackController>();
 		playerAttackManager = GetComponentInParent<PlayerAttackManager>();
 	}
 

@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 114289298242176550}
   - component: {fileID: 114089630552173996}
   - component: {fileID: 114601861927781762}
-  - component: {fileID: 114610761277076988}
   - component: {fileID: 114270978839962884}
+  - component: {fileID: 2587511037803391271}
   - component: {fileID: 114603299218754804}
   - component: {fileID: 114706244179538052}
   - component: {fileID: 114353346805848544}
@@ -274,18 +274,6 @@ MonoBehaviour:
   MaxHealth: 0
   Health: 0
   PlayerHUD: {fileID: 0}
---- !u!114 &114610761277076988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615068326187380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 110f368890f6af4479d6c5f3b2cf0c81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114270978839962884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +287,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerThrowPower: 25
+--- !u!114 &2587511037803391271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615068326187380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4175d4a66d6f57b4cbc653cf92da7a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxChargeAttackDamageMultiplier: 2.5
+  ChargeAttackMinimumChargePercentage: 0.3
+  ChargeAttackLungeMinimumChargePercentage: 0.6
+  BlockMotionTime: 0.5
+  BasicAttackMotionTime: 0.3
+  AttackFullyChargedMotionTime: 2.5
+  ChargeAttackMotionTime: 0.6
+  JumpKickAttackMotionTime: 15
+  SlideKickAttackMotionTime: 0.6
+  BlockCooldown: 0.3
+  BasicAttackCooldown: 0.1
+  JumpKickAttackCooldown: 0.5
+  SlideKickAttackCooldown: 0.5
 --- !u!114 &114603299218754804
 MonoBehaviour:
   m_ObjectHideFlags: 0

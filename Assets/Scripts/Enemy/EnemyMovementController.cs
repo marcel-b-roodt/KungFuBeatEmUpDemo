@@ -65,7 +65,7 @@ public class EnemyMovementController : BaseCharacterController
 
 	private Vector3 _rootMotionPositionDelta;
 	private Quaternion _rootMotionRotationDelta;
-	private Player.PlayerMovementInputs _bufferedInputs;
+	private Player.PlayerInputs _bufferedInputs;
 
 	private PlayerAnimationManager playerAnimationManager;
 
