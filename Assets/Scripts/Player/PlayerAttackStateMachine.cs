@@ -1,186 +1,277 @@
 ﻿using System;
 using UnityEngine;
 
-public class PlayerAttackStateMachine : MonoBehaviour//SuperStateMachine
+public class PlayerAttackStateMachine : MonoBehaviour
 {
-	//private PlayerStatus playerStatus;
-	//private PlayerAnimationManager playerAnimationManager;
-	//private PlayerAttackManager playerAttackManager;
-	////private PlayerInputManager playerInputManager;
-	//private PlayerInteractionManager playerInteractionManager;
-	////private PlayerMovementStateMachine playerMovementStateMachine;
+//	public const float JUMP_KICK_ALLOWANCE_TIME = 0.2f;
 
-	//public float MaxChargeAttackDamageMultiplier = 2.5f;
-	//public float ChargeAttackMinimumChargePercentage = 0.3f;
-	//public float ChargeAttackLungeMinimumChargePercentage = 0.6f;
+//	private PlayerStatus playerStatus;
+//	private PlayerAnimationManager playerAnimationManager;
+//	private PlayerAttackManager playerAttackManager;
+//	private PlayerInputManager playerInputManager;
+//	private PlayerInteractionManager playerInteractionManager;
+//	private PlayerMovementStateMachine playerMovementStateMachine;
 
-	////Attack Motion Times - Convert these to frames?
-	//public float BasicAttackMotionTime = 0.3f;
-	//public float GrappleMotionTime = 1.2f;
+//	public float MaxChargeAttackDamageMultiplier = 2.5f;
+//	public float ChargeAttackMinimumChargePercentage = 0.3f;
+//	public float ChargeAttackLungeMinimumChargePercentage = 0.6f;
 
-	////Attack Cooldown Times
-	//public float BasicAttackCooldown = 0.1f;
+//	//Attack Motion Times - Convert these to frames?
+//	public float BlockMotionTime = 0.5f;
+//	public float BasicAttackMotionTime = 0.3f;
+//	public float AttackFullyChargedMotionTime = 2.5f;
+//	public float ChargeAttackMotionTime = 0.6f;
+//	public float JumpKickAttackMotionTime = 15f;
+//	public float SlideKickAttackMotionTime = 0.6f;
 
-	//public Enum CurrentState { get { return currentState; } private set { ChangeState(); currentState = value; } }
+//	//Attack Cooldown Times
+//	public float BlockCooldown = 0.3f;
+//	public float BasicAttackCooldown = 0.1f;
+//	public float JumpKickAttackCooldown = 0.5f;
+//	public float SlideKickAttackCooldown = 0.5f;
 
-	//public float TimeSinceEnteringCurrentState { get { return Time.time - timeEnteredState; } }
+//	private float attackChargePercentage = 0f;
+//	private bool blockInputHandled = false;
 
-	//#region PropertyGetters
-	//public bool CanAttack
-	//{
-	//	get
-	//	{
-	//		return true;
-	//		//return !((PlayerMovementState)playerMovementStateMachine.CurrentState == PlayerMovementState.Sliding ||
-	//		//		(PlayerMovementState)playerMovementStateMachine.CurrentState == PlayerMovementState.Jumping ||
-	//		//		(PlayerMovementState)playerMovementStateMachine.CurrentState == PlayerMovementState.Falling);
-	//	}
-	//}
-	//#endregion
+//	public Enum CurrentState { get { return currentState; } private set { ChangeState(); currentState = value; } }
 
-	//private void ChangeState()
-	//{
-	//	lastState = state.currentState;
-	//	timeEnteredState = Time.time;
-	//}
+//	public float TimeSinceEnteringCurrentState { get { return Time.time - timeEnteredState; } }
 
-	//void Awake()
-	//{
-	//	playerStatus = GetComponent<PlayerStatus>();
-	//	playerAnimationManager = GetComponent<PlayerAnimationManager>();
-	//	playerAttackManager = GetComponent<PlayerAttackManager>();
-	//	//playerInputManager = GetComponent<PlayerInputManager>();
-	//	playerInteractionManager = GetComponent<PlayerInteractionManager>();
-	//	//playerMovementStateMachine = GetComponent<PlayerMovementStateMachine>();
-	//	CurrentState = PlayerAttackState.Idle;
-	//}
+//	#region PropertyGetters
 
-	//protected override void EarlyGlobalSuperUpdate()
-	//{
+//	public float DamageMultiplier { get { return attackChargePercentage * MaxChargeAttackDamageMultiplier; } }
 
-	//}
+//	public float AttackChargePercentage { get { return attackChargePercentage; } }
 
-	//protected override void LateGlobalSuperUpdate()
-	//{
-	//	//Debug.Log($"Time in state: {TimeSinceEnteringCurrentState}");
-	//}
+//	#endregion
 
-	//#region AttackStates
+//	private void ChangeState()
+//	{
+//		lastState = state.currentState;
+//		timeEnteredState = Time.time;
+//	}
 
-	//#region Idle
-	//void Idle_EnterState()
-	//{
-	//	playerAnimationManager.ResetAnimatorParameters();
-	//	playerAttackManager.ClearEnemiesHit();
-	//}
+//	void Awake()
+//	{
+//		playerStatus = GetComponent<PlayerStatus>();
+//		playerAnimationManager = GetComponent<PlayerAnimationManager>();
+//		playerAttackManager = GetComponent<PlayerAttackManager>();
+//		playerInputManager = GetComponent<PlayerInputManager>();
+//		playerInteractionManager = GetComponent<PlayerInteractionManager>();
+//		playerMovementStateMachine = GetComponent<PlayerMovementStateMachine>();
+//		CurrentState = PlayerAttackState.Idle;
+//	}
 
-	//void Idle_SuperUpdate()
-	//{
-	//	//if (playerMovementStateMachine.IsRecovering)
-	//	//	return;
+//	protected override void EarlyGlobalSuperUpdate()
+//	{
 
-	//	//if (playerInputManager.Current.PrimaryFireInput)
-	//	//{
-	//	//	PrimaryAttack();
-	//	//	return;
-	//	//}
+//	}
 
-	//	//if (playerInputManager.Current.SecondaryFireInput)
-	//	//{
-	//	//	Grapple();
-	//	//	return;
-	//	//}
+//	protected override void LateGlobalSuperUpdate()
+//	{
+//		if (Input.GetButtonUp(InputCodes.SecondaryFire))
+//			blockInputHandled = false;
 
-	//	//if (playerInputManager.Current.InteractInput)
-	//	//{
-	//	//	playerInteractionManager.Interact();
-	//	//	return;
-	//	//}
-	//}
-	//#endregion
+//		//Debug.Log($"Time in state: {TimeSinceEnteringCurrentState}");
+//	}
 
-	//#region BasicAttacking
-	//void BasicAttacking_EnterState()
-	//{
-	//	//playerAnimationManager.ExecuteBasicAttack();
-	//	playerAttackManager.BasicAttack(); //Move this to a connecting frame in the animation
-	//}
+//	#region AttackStates
 
-	//void BasicAttacking_SuperUpdate()
-	//{
-	//	if (TimeSinceEnteringCurrentState >= BasicAttackMotionTime)
-	//	{
-	//		CurrentState = PlayerAttackState.Idle;
-	//		return;
-	//	}
-	//}
-	//#endregion
+//	#region Idle
+//	void Idle_EnterState()
+//	{
+//		playerAttackManager.ClearEnemiesHit();
+//		playerAnimationManager.ResetAnimatorParameters();
+//	}
 
-	//#region Grappling
-	//void Grappling_EnterState()
-	//{
-	//	playerAnimationManager.ExecuteGrapple();
-	//	playerAttackManager.Grapple(); //Grab the target we wish to grapple.
-	//}
+//	void Idle_SuperUpdate()
+//	{
+//		if (playerMovementStateMachine.IsRecovering)
+//			return;
 
-	//void Grappling_SuperUpdate()
-	//{
-	//	if (TimeSinceEnteringCurrentState >= GrappleMotionTime)
-	//	{
-	//		CurrentState = PlayerAttackState.Idle;
-	//		return;
-	//	}
+//		if (playerInputManager.Current.PrimaryFireInput)
+//		{
+//			Attack();
+//			return;
+//		}
 
-	//	//Make Grapple Attempt
+//		if (playerInputManager.Current.SecondaryFireInput && !blockInputHandled)
+//		{
+//			CurrentState = PlayerAttackState.Blocking;
+//			return;
+//		}
 
-	//	//Determine which type of grapple we need to apply to the player from the AttackManager.
-	//	//See which move we should perform. Let the enemy have a chance to counter it if they know what we're doing.
-	//	//Perform the attack
-	//}
-	//#endregion
+//		if (playerInputManager.Current.InteractInput)
+//		{
+//			playerInteractionManager.Interact();
+//			return;
+//		}
+//	}
+//	#endregion
 
-	//#endregion
+//	#region Blocking
+//	void Blocking_EnterState()
+//	{
+//		blockInputHandled = true;
+//		playerAnimationManager.ExecuteBlock();
+//	}
 
-	//internal void PrimaryAttack()
-	//{
-	//	if (playerInteractionManager.HoldingObject)
-	//	{
-	//		playerInteractionManager.Throw();
-	//		//Animate player throw?
-	//	}
-	//	else
-	//	{
-	//		if (CanAttack)
-	//		{
-	//			CurrentState = PlayerAttackState.BasicAttacking;
-	//			return;
-	//		}
-	//	}
-	//}
+//	void Blocking_SuperUpdate()
+//	{
+//		if (TimeSinceEnteringCurrentState >= BlockMotionTime)
+//		{
+//			CurrentState = PlayerAttackState.Idle;
+//			return;
+//		}
+//	}
 
-	//internal void Grapple()
-	//{
-	//	if (playerInteractionManager.HoldingObject)
-	//	{
-	//		playerInteractionManager.Drop();
-	//		//Animate player drop?
-	//	}
-	//	else
-	//	{
-	//		if (CanAttack)
-	//		{
+//	#endregion
 
-	//			CurrentState = PlayerAttackState.Grappling;
-	//			return;
-	//		}
-	//	}
-	//}
+//	#region BasicAttacking
+//	void BasicAttacking_EnterState()
+//	{
+//		playerAnimationManager.ExecuteBasicAttack();
+//		playerAttackManager.BasicAttack(); //Move this to a connecting frame in the animation
+//	}
+
+//	void BasicAttacking_SuperUpdate()
+//	{
+//		if (TimeSinceEnteringCurrentState >= BasicAttackMotionTime)
+//		{
+//			CurrentState = PlayerAttackState.Idle;
+//			return;
+//		}
+//	}
+//	#endregion
+
+//	#region ChargingAttack
+//	void ChargingAttack_EnterState()
+//	{
+//		playerAnimationManager.ChargeUpAttack();
+//		attackChargePercentage = 0f;
+//	}
+
+//	void ChargingAttack_SuperUpdate()
+//	{
+//		attackChargePercentage = Mathf.Min(TimeSinceEnteringCurrentState / AttackFullyChargedMotionTime, 1f);
+//		playerAnimationManager.ChangeAnimationSpeed(Mathf.Lerp(0.5f, 1f, attackChargePercentage));
+
+//		if (!playerInputManager.Current.PrimaryFireInput && attackChargePercentage < ChargeAttackMinimumChargePercentage)
+//		{
+//			CurrentState = PlayerAttackState.BasicAttacking;
+//			return;
+//		}
+
+//		if (attackChargePercentage >= ChargeAttackMinimumChargePercentage && !playerInputManager.Current.PrimaryFireInput)
+//		{
+//			CurrentState = PlayerAttackState.ChargeAttacking;
+//			return;
+//		}
+
+//		//Debug.Log($"Attack Charge Percentage: {attackChargePercentage}");
+//	}
+
+//	void ChargingAttack_ExitState()
+//	{
+//		playerAnimationManager.ResetAnimationSpeed();
+//	}
+//	#endregion
+
+//	#region ChargeAttacking
+//	void ChargeAttacking_EnterState()
+//	{
+//		if (attackChargePercentage >= ChargeAttackLungeMinimumChargePercentage)
+//		{
+//			if (playerMovementStateMachine.InCrouchingState)
+//				playerMovementStateMachine.CrouchLunge();
+//			else
+//				playerMovementStateMachine.Lunge();
+//		}
+
+//		playerAnimationManager.ExecuteChargeAttack();
+//	}
+
+//	void ChargeAttacking_SuperUpdate()
+//	{
+//		if (TimeSinceEnteringCurrentState >= ChargeAttackMotionTime && (PlayerMovementState)playerMovementStateMachine.CurrentState != PlayerMovementState.Lunging)
+//		{
+//			CurrentState = PlayerAttackState.Idle;
+//			return;
+//		}
+//	}
+//	#endregion
+
+//	#region JumpKicking
+//	void JumpKicking_EnterState()
+//	{
+//		playerAnimationManager.ExecuteJumpKick();
+//	}
+
+//	void JumpKicking_SuperUpdate()
+//	{
+//		if (TimeSinceEnteringCurrentState >= JumpKickAttackMotionTime || (PlayerMovementState)playerMovementStateMachine.CurrentState != PlayerMovementState.Jumping)
+//		{
+//			CurrentState = PlayerAttackState.Idle;
+//			return;
+//		}
+//	}
+//	#endregion
+
+//	#region SlideKicking
+//	void SlideKicking_EnterState()
+//	{
+//		playerAnimationManager.ExecuteSlideKick();
+//	}
+
+//	void SlideKicking_SuperUpdate()
+//	{
+//		if (TimeSinceEnteringCurrentState >= SlideKickAttackMotionTime || (PlayerMovementState)playerMovementStateMachine.CurrentState != PlayerMovementState.Sliding)
+//		{
+//			CurrentState = PlayerAttackState.Idle;
+//			return;
+//		}
+//	}
+//	#endregion
+
+//	#endregion
+
+//	internal void Attack()
+//	{
+//		if (playerInteractionManager.HoldingObject)
+//		{
+//			playerInteractionManager.Throw();
+//			//Animate player throw?
+//		}
+//		else
+//		{
+//			if ((PlayerMovementState)playerMovementStateMachine.CurrentState == PlayerMovementState.Sliding)
+//			{
+//				CurrentState = PlayerAttackState.SlideKicking;
+//				return;
+//			}
+//			else if ((PlayerMovementState)playerMovementStateMachine.CurrentState == PlayerMovementState.Jumping
+//				&& playerMovementStateMachine.TimeSinceEnteringCurrentState < JUMP_KICK_ALLOWANCE_TIME
+//				&& playerMovementStateMachine.LocalMovementIsForwardFacing)
+//			{
+//				CurrentState = PlayerAttackState.JumpKicking;
+//				return;
+//			}
+//			else
+//			{
+//				CurrentState = PlayerAttackState.ChargingAttack;
+//				return;
+//			}
+//		}
+//	}
 }
 
-public enum PlayerAttackState
-{
-	Idle,
-	Blocking,
-	BasicAttacking,
-	Grappling
-}
+//public enum PlayerAttackState
+//{
+//	Idle,
+//	Blocking,
+//	BasicAttacking,
+//	ChargingAttack,
+//	ChargeAttacking,
+//	JumpKicking,
+//	SlideKicking
+//}

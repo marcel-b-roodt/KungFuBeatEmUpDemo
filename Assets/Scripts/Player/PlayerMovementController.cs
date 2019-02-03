@@ -6,6 +6,7 @@ public enum PlayerMovementState
 {
 	Default,
 	Sliding,
+	JumpKicking,
 }
 
 public class PlayerMovementController : BaseCharacterController
@@ -38,13 +39,6 @@ public class PlayerMovementController : BaseCharacterController
 	public float MaxSlideTime = 0.6f;
 	public float StoppedTime = 0.3f;
 
-	[Header("Climbing")]
-	public float AllowedHangAngle = 30f;
-	public float StepUpDuration = 0.25f;
-	public float VaultDuration = 0.6f;
-	public float ClimbUpDuration = 1.2f;
-	public float ClimbUpPositionFactor = 0.5f;
-
 	[Header("Misc")]
 	public List<Collider> IgnoredColliders;
 	public bool OrientTowardsGravity = false;
@@ -59,7 +53,6 @@ public class PlayerMovementController : BaseCharacterController
 	private Vector3 _currentSlideVelocity;
 	private bool _startedSlide;
 	private bool _isSlideStopped;
-	private float _timeSinceStartedSlide = 0;
 	private float _timeSinceStopped = 0;
 
 	private Collider[] _probedColliders = new Collider[8];
@@ -81,7 +74,8 @@ public class PlayerMovementController : BaseCharacterController
 	private Vector3 lastInnerNormal = Vector3.zero;
 	private Vector3 lastOuterNormal = Vector3.zero;
 
-	private Player.PlayerMovementInputs _bufferedInputs;
+	private Player.PlayerMovementInputs _bufferedMovementInputs;
+	private Player.PlayerInteractionInputs _bufferedInteractionInputs;
 
 	private PlayerAnimationManager playerAnimationManager;
 
@@ -126,7 +120,6 @@ public class PlayerMovementController : BaseCharacterController
 					_currentSlideVelocity = _moveInputVector * SlideSpeed;
 					_startedSlide = true;
 					_isSlideStopped = false;
-					_timeSinceStartedSlide = 0f;
 					_timeSinceStopped = 0f;
 
 					HandleCrouching();
@@ -149,7 +142,7 @@ public class PlayerMovementController : BaseCharacterController
 				}
 			case PlayerMovementState.Sliding:
 				{
-					if (!Motor.GroundingStatus.IsStableOnGround || !_bufferedInputs.SlideHold)
+					if (!Motor.GroundingStatus.IsStableOnGround || !_bufferedMovementInputs.CrouchHold)
 						HandleCrouching();
 
 					playerAnimationManager.SetSlide(false);
@@ -161,9 +154,9 @@ public class PlayerMovementController : BaseCharacterController
 	/// <summary>
 	/// This is called every frame by PlayerController in order to tell the character what its inputs are
 	/// </summary>
-	public void SetInputs(ref Player.PlayerMovementInputs inputs)
+	public void SetMovementInputs(ref Player.PlayerMovementInputs inputs)
 	{
-		_bufferedInputs = inputs;
+		_bufferedMovementInputs = inputs;
 
 		// Clamp input
 		Vector3 moveInputVector = new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward).normalized;
@@ -178,7 +171,6 @@ public class PlayerMovementController : BaseCharacterController
 		Quaternion cameraPlanarRotation = Quaternion.LookRotation(cameraPlanarDirection, Motor.CharacterUp);
 
 		// Handle state transition from input
-
 		switch (CurrentPlayerState)
 		{
 			case PlayerMovementState.Default:
@@ -193,22 +185,22 @@ public class PlayerMovementController : BaseCharacterController
 						_jumpRequested = true;
 					}
 
-					// Crouching input
-					if (inputs.Crouch)
-						HandleCrouching();
+					if (inputs.Crouch && Motor.GroundingStatus.IsStableOnGround)
+					{
+						if (Motor.Velocity.magnitude >= SlideVelocityThreshold)
+						{
+							TransitionToState(PlayerMovementState.Sliding);
+						}
+						else
+						{
+							HandleCrouching();
+						}
+					}
 
 					if (inputs.Walk)
 						_isWalking = true;
 					else
 						_isWalking = false;
-
-					if (inputs.Slide)
-					{
-						if (Motor.Velocity.magnitude >= SlideVelocityThreshold && Motor.GroundingStatus.IsStableOnGround && !_isCrouching)
-						{
-							TransitionToState(PlayerMovementState.Sliding);
-						}
-					}
 
 					break;
 				}
@@ -217,6 +209,29 @@ public class PlayerMovementController : BaseCharacterController
 					// Move and look inputs
 					_moveInputVector = cameraPlanarRotation * moveInputVector;
 
+					break;
+				}
+		}
+	}
+
+	/// <summary>
+	/// This is called every frame by PlayerController in order to tell the character what its inputs are
+	/// </summary>
+	public void SetInteractionInputs(ref Player.PlayerInteractionInputs inputs)
+	{
+		_bufferedInteractionInputs = inputs;
+
+		// Handle state transition from input
+		switch (CurrentPlayerState)
+		{
+			case PlayerMovementState.Default:
+				{
+					break;
+				}
+			case PlayerMovementState.Sliding:
+				{
+					if (TimeSinceEnteringState <= SlideAttackAllowanceTime)
+						//Do attack
 					break;
 				}
 		}
@@ -243,7 +258,6 @@ public class PlayerMovementController : BaseCharacterController
 			case PlayerMovementState.Sliding:
 				{
 					// Update times
-					_timeSinceStartedSlide += deltaTime;
 					if (_isSlideStopped)
 					{
 						_timeSinceStopped += deltaTime;
@@ -388,9 +402,6 @@ public class PlayerMovementController : BaseCharacterController
 							_jumpRequested = false;
 							_jumpConsumed = true;
 							_jumpedThisFrame = true;
-
-							if (_shouldBeCrouching)
-								HandleCrouching();
 						}
 					}
 
@@ -429,12 +440,11 @@ public class PlayerMovementController : BaseCharacterController
 
 						if (reorientedInput.magnitude > 0)
 						{
-							//TODO: Fix this
+							//TODO: Fix this rotation some time. See if something is better
 							currentVelocity = Vector3.RotateTowards(currentVelocity, currentVelocity.magnitude * reorientedInput.normalized, Mathf.Deg2Rad * SlideRotationSpeed, currentVelocity.magnitude);
 							currentVelocity = Vector3.Lerp(currentVelocity, currentVelocity.magnitude * reorientedInput.normalized, 1 - Mathf.Exp(-SlideRotationSpeed * deltaTime));
 						}
 							
-
 						currentVelocity = Vector3.Lerp(currentVelocity, Vector3.zero, 0.01f);
 					}
 					break;
@@ -467,6 +477,11 @@ public class PlayerMovementController : BaseCharacterController
 							{
 								_jumpConsumed = false;
 							}
+							else
+							{
+								if (_shouldBeCrouching)
+									HandleCrouching();
+							}
 							_timeSinceLastAbleToJump = 0f;
 						}
 						else
@@ -482,7 +497,7 @@ public class PlayerMovementController : BaseCharacterController
 						}
 					}
 
-					if (!_bufferedInputs.CrouchHold && _shouldBeCrouching)
+					if (!_bufferedMovementInputs.CrouchHold && _shouldBeCrouching)
 						HandleCrouching();
 
 					// Handle uncrouching
@@ -493,7 +508,7 @@ public class PlayerMovementController : BaseCharacterController
 			case PlayerMovementState.Sliding:
 				{
 					// Detect being stopped by elapsed time
-					if (!_isSlideStopped && _timeSinceStartedSlide > MaxSlideTime)
+					if (!_isSlideStopped && TimeSinceEnteringState > MaxSlideTime)
 					{
 						_isSlideStopped = true;
 					}
@@ -537,6 +552,7 @@ public class PlayerMovementController : BaseCharacterController
 
 	public override void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, ref HitStabilityReport hitStabilityReport)
 	{
+		
 	}
 
 	public override void OnMovementHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint, ref HitStabilityReport hitStabilityReport)
@@ -581,6 +597,9 @@ public class PlayerMovementController : BaseCharacterController
 					{
 						_timeSinceLastLanded = 0f;
 						_mustRecoverFromJump = true;
+
+						if (_bufferedMovementInputs.CrouchHold)
+							HandleCrouching();
 					}
 
 					break;

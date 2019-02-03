@@ -63,10 +63,8 @@ public class Player : MonoBehaviour
 		movementInputs.JumpHold = Input.GetButton(InputCodes.Jump);
 		movementInputs.Crouch = Input.GetButtonDown(InputCodes.Crouch);
 		movementInputs.CrouchHold = Input.GetButton(InputCodes.Crouch);
-		movementInputs.Slide = Input.GetButtonDown(InputCodes.Slide);
-		movementInputs.SlideHold = Input.GetButton(InputCodes.Slide);
 
-		playerController.SetInputs(ref movementInputs);
+		playerController.SetMovementInputs(ref movementInputs);
 	}
 
 	private void HandleInteractionInput()
@@ -74,8 +72,13 @@ public class Player : MonoBehaviour
 		PlayerInteractionInputs interactionInputs = new PlayerInteractionInputs();
 
 		interactionInputs.PrimaryFire = Input.GetButtonDown(InputCodes.PrimaryFire);
+		interactionInputs.PrimaryFireHold = Input.GetButtonDown(InputCodes.PrimaryFire);
 		interactionInputs.SecondaryFire = Input.GetButtonDown(InputCodes.SecondaryFire);
+		interactionInputs.SecondaryFireHold = Input.GetButtonDown(InputCodes.SecondaryFire);
 		interactionInputs.Interact = Input.GetButtonDown(InputCodes.Interact);
+		interactionInputs.InteractHold = Input.GetButtonDown(InputCodes.Interact);
+
+		playerController.SetInteractionInputs(ref interactionInputs);
 	}
 
 	public struct PlayerMovementInputs
@@ -88,15 +91,16 @@ public class Player : MonoBehaviour
 		public bool JumpHold;
 		public bool Crouch;
 		public bool CrouchHold;
-		public bool Slide;
-		public bool SlideHold;
 	}
 
 	public struct PlayerInteractionInputs
 	{
 		public bool PrimaryFire;
+		public bool PrimaryFireHold;
 		public bool SecondaryFire;
+		public bool SecondaryFireHold;
 		public bool Interact;
+		public bool InteractHold;
 	}
 
 	public static class InputCodes
@@ -108,7 +112,6 @@ public class Player : MonoBehaviour
 		public const string Walk = "Walk";
 		public const string Jump = "Jump";
 		public const string Crouch = "Crouch";
-		public const string Slide = "Slide";
 		public const string PrimaryFire = "PrimaryFire";
 		public const string SecondaryFire = "SecondaryFire";
 		public const string Interact = "Interact";

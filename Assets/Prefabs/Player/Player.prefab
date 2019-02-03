@@ -208,11 +208,6 @@ MonoBehaviour:
   SlideSpeed: 10
   MaxSlideTime: 0.6
   StoppedTime: 0.3
-  AllowedHangAngle: 30
-  StepUpDuration: 0.25
-  VaultDuration: 0.6
-  ClimbUpDuration: 1.2
-  ClimbUpPositionFactor: 0.5
   IgnoredColliders: []
   OrientTowardsGravity: 0
   Gravity: {x: 0, y: -20, z: 0}
