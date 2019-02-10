@@ -678,22 +678,6 @@ public class RHC_BobController : MonoBehaviour
                 bobbingMethod = CrouchRunBob;   // Set the delegate method.
             }
         }
-        // If player is crawling, make the comparisons regarding whether it's walking(crawling slow) or running(crawling fast), then set the necessary method to be used in Update.
-        else if (en_CurrentStanceState == RHC_EventManager.StanceState.Crawling)
-        {
-            if (en_CurrentMovementState == RHC_EventManager.MovementState.Walking)
-            {
-                b_EnableBobbing = true;
-                b_MovementStateChanged = true;
-                bobbingMethod = CrawlSlowBob;   // Set the delegate method.
-            }
-            else if (en_CurrentMovementState == RHC_EventManager.MovementState.Running)
-            {
-                b_EnableBobbing = true;
-                b_MovementStateChanged = true;
-                bobbingMethod = CrawlFastBob;   // Set the delegate method.
-            }
-        }
     }
 
     /// <summary> Listens to the bobChangedPreset event in RHC_EventManager. Adjusts the sent setting's variables as the sent preset parameter.</summary>

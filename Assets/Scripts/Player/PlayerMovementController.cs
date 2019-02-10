@@ -40,6 +40,7 @@ public class PlayerMovementController : BaseCharacterController
 	public float FallCrouchRecoveryThreshold = 2.6f * JumpHeight;
 	public float FallRecoveryTime = 0.15f;
 	public float FallCrouchRecoveryTime = 0.25f;
+	public FallRecoveryStatus FallRecoveryStatus { get; private set; } = FallRecoveryStatus.Default;
 
 	[Header("Sliding")]
 	public float SlideVelocityThreshold = 2f;
@@ -70,7 +71,6 @@ public class PlayerMovementController : BaseCharacterController
 	private bool _jumpRequested = false;
 	private bool _jumpConsumed = false;
 	private bool _jumpedThisFrame = false;
-	private FallRecoveryStatus _fallRecoveryStatus = FallRecoveryStatus.Default;
 	private float _jumpStartYPosition = 0f;
 	private float _timeSinceJumpRequested = Mathf.Infinity;
 	private float _timeSinceLastAbleToJump = 0f;
@@ -224,7 +224,7 @@ public class PlayerMovementController : BaseCharacterController
 		{
 			case PlayerMovementState.Default:
 				{
-					if (_fallRecoveryStatus != FallRecoveryStatus.Default)
+					if (FallRecoveryStatus != FallRecoveryStatus.Default)
 					{
 						_fallRecoveryTime += deltaTime;
 					}
@@ -286,7 +286,7 @@ public class PlayerMovementController : BaseCharacterController
 				{
 					Vector3 targetMovementVelocity = Vector3.zero;
 
-					if (_fallRecoveryStatus != FallRecoveryStatus.Default)
+					if (FallRecoveryStatus != FallRecoveryStatus.Default)
 					{
 						_moveInputVector = Vector3.zero;
 						_jumpRequested = false;
@@ -467,17 +467,17 @@ public class PlayerMovementController : BaseCharacterController
 							_timeSinceLastAbleToJump += deltaTime;
 						}
 
-						if (_fallRecoveryStatus != FallRecoveryStatus.Default)
+						if (FallRecoveryStatus != FallRecoveryStatus.Default)
 						{
-							switch (_fallRecoveryStatus)
+							switch (FallRecoveryStatus)
 							{
 								case FallRecoveryStatus.Recovering:
 									if (_fallRecoveryTime >= FallRecoveryTime)
-										_fallRecoveryStatus = FallRecoveryStatus.Default;
+										FallRecoveryStatus = FallRecoveryStatus.Default;
 									break;
 								case FallRecoveryStatus.CrouchRecovering:
 									if (_fallRecoveryTime >= FallCrouchRecoveryTime)
-										_fallRecoveryStatus = FallRecoveryStatus.Default;
+										FallRecoveryStatus = FallRecoveryStatus.Default;
 									break;
 							}
 						}
@@ -590,12 +590,12 @@ public class PlayerMovementController : BaseCharacterController
 					{
 						if (fallHeight >= FallCrouchRecoveryThreshold)
 						{
-							_fallRecoveryStatus = FallRecoveryStatus.CrouchRecovering;
+							FallRecoveryStatus = FallRecoveryStatus.CrouchRecovering;
 							RHC_EventManager.PSVO_ChangeStanceState(RHC_EventManager.StanceState.CrouchRecovering);
 						}
 						else
 						{
-							_fallRecoveryStatus = FallRecoveryStatus.Recovering;
+							FallRecoveryStatus = FallRecoveryStatus.Recovering;
 							RHC_EventManager.PSVO_ChangeStanceState(RHC_EventManager.StanceState.Recovering);
 						}
 

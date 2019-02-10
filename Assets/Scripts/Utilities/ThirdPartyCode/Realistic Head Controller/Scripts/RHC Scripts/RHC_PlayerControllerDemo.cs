@@ -85,8 +85,8 @@ public class RHC_PlayerControllerDemo : MonoBehaviour {
                 VO_Crouch();
             if (Input.GetKeyDown(s_StandKey))
                 VO_Stand();
-            if (Input.GetKeyDown(s_ProneKey))
-                VO_Crawl();
+            //if (Input.GetKeyDown(s_ProneKey))
+            //    VO_Crawl();
 
         }
 
@@ -110,13 +110,13 @@ public class RHC_PlayerControllerDemo : MonoBehaviour {
         co_HeightChange = StartCoroutine(CO_LerpControllerHeight(f_CrouchHeight, f_CrouchSpeedMultiplier, RHC_EventManager.StanceState.Crouching));
     }
 
-    private void VO_Crawl()
-    {
-        if (co_HeightChange != null)
-            StopCoroutine(co_HeightChange);
+    //private void VO_Crawl()
+    //{
+    //    if (co_HeightChange != null)
+    //        StopCoroutine(co_HeightChange);
 
-        co_HeightChange = StartCoroutine(CO_LerpControllerHeight(f_CrawlHeight, f_CrawlSpeedMultiplier, RHC_EventManager.StanceState.Crawling));
-    }
+    //    co_HeightChange = StartCoroutine(CO_LerpControllerHeight(f_CrawlHeight, f_CrawlSpeedMultiplier, RHC_EventManager.StanceState.Crawling));
+    //}
 
     IEnumerator CO_LerpControllerHeight(float target, float speedMult, RHC_EventManager.StanceState targetState)
     {

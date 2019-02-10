@@ -114,9 +114,9 @@ public class RHC_ExampleHandsAnimator : MonoBehaviour
         anim_Target.ResetTrigger(i_CrawlStarted);
         anim_Target.ResetTrigger(i_CrawlStopped);
 
-        if (changedTo == RHC_EventManager.StanceState.Crawling)
-            anim_Target.SetTrigger(i_CrawlStarted);
-        else
+        //if (changedTo == RHC_EventManager.StanceState.Crawling)
+        //    anim_Target.SetTrigger(i_CrawlStarted);
+        //else
             anim_Target.SetTrigger(i_CrawlStopped);
             
         anim_Target.SetTrigger(i_RunStopped);

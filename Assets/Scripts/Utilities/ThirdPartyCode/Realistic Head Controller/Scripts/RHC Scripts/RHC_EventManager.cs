@@ -60,10 +60,10 @@ using UnityEngine;
 
 public static class RHC_EventManager
 {
-    public enum MovementState { Idling, Walking, Running };                                  // Movement states.
+    public enum MovementState { Idling, Walking, Running, Sliding, JumpKicking, Lunging };                                  // Movement states.
     public static MovementState en_CurrentMovementState;
 
-    public enum StanceState { Standing, Crouching, Crawling, OnAir, Recovering, CrouchRecovering };                                // Stance states.
+    public enum StanceState { Standing, Crouching, OnAir, Recovering, CrouchRecovering };                                // Stance states.
     public static StanceState en_CurrentStanceState;
 
     public delegate void MovementStateActions(MovementState currentMovementState);           // Movement state actions, 1 event is defined as default(movementStateChanged). Would be called when player stops moving, starts walking, running etc.

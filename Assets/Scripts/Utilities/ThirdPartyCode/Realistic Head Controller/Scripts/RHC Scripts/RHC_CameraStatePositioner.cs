@@ -34,153 +34,166 @@ using System.Collections;
 
 public class RHC_CameraStatePositioner : MonoBehaviour
 {
-    #region Variable(s)
+	#region Variable(s)
 
-    /* GENERAL */
-    public float f_PosInterpolationSpeed;           // Speed used while processing position interpolations.
-    public float f_RotInterpolationSpeed;           // Speed used while processing rotation interpolations.
-    private Coroutine co_ChangeState;               // Coroutine to change orientation state.
-    private bool b_WasAired;                        // Logic flag used to trigger jump state interpolation.
-    private Transform t_This;                       // This transform.
+	/* GENERAL */
+	public float f_PosInterpolationSpeed;           // Speed used while processing position interpolations.
+	public float f_RotInterpolationSpeed;           // Speed used while processing rotation interpolations.
+	private Coroutine co_ChangeState;               // Coroutine to change orientation state.
+	private bool b_WasAired;                        // Logic flag used to trigger jump state interpolation.
+	private Transform t_This;                       // This transform.
 
-    /* DEFAULT ORIENTATION */
-    public Vector3 v3_DefaultPosition;              // Initial position of this transform.
-    public Vector3 v3_DefaultRotation;              // Initial ROTer of this transform.    
+	/* DEFAULT ORIENTATION */
+	public Vector3 v3_DefaultPosition;              // Initial position of this transform.
+	public Vector3 v3_DefaultRotation;              // Initial ROTer of this transform.    
 
-    /* AIR ORIENTATION */
-    public Vector3 v3_AirPosition;                  // Target position to interpolate to when jumped.
-    public Vector3 v3_AirRotation;                  // Target rotation to interpolate to when jumped.
-    public float f_GoDownFromAirPosSpeed;           // Speed used to interpolate the position of the head from air orientation to "down" orientation. "Down" orientation is the position&rotation to interpolate when "landed".
-    public float f_GoDownFromAirRotSpeed;           // Speed used to interpolate the rotation of the head from air orientation to "down" orientation. "Down" orientation is the position&rotation to interpolate when "landed".
+	/* AIR ORIENTATION */
+	public Vector3 v3_AirPosition;                  // Target position to interpolate to when jumped.
+	public Vector3 v3_AirRotation;                  // Target rotation to interpolate to when jumped.
+	public float f_GoDownFromAirPosSpeed;           // Speed used to interpolate the position of the head from air orientation to "down" orientation. "Down" orientation is the position&rotation to interpolate when "landed".
+	public float f_GoDownFromAirRotSpeed;           // Speed used to interpolate the rotation of the head from air orientation to "down" orientation. "Down" orientation is the position&rotation to interpolate when "landed".
 
-    /* AIRDOWN ORIENTATION */
-    public Vector3 v3_AirDownPosition;              // Target position to interpolate to when landed.
-    public Vector3 v3_AirDownRotation;              // Target rotation to interpolate to when landed.
+	/* AIRDOWN ORIENTATION */
+	public Vector3 v3_AirDownPosition;              // Target position to interpolate to when landed.
+	public Vector3 v3_AirDownRotation;              // Target rotation to interpolate to when landed.
 
-    /* CROUCH ORIENTATION */
-    public Vector3 v3_CrouchingPosition;            // Target position to interpolate to when crouched.
-    public Vector3 v3_CrouchingRotation;            // Target rotation to interpolate to when crouched.
+	/* CROUCH ORIENTATION */
+	public Vector3 v3_CrouchingPosition;            // Target position to interpolate to when crouched.
+	public Vector3 v3_CrouchingRotation;            // Target rotation to interpolate to when crouched.
 
-    /* PRONE ORIENTATION */
-    public Vector3 v3_CrawlingPosition;              // Target position to interpolate to when proned.
-    public Vector3 v3_CrawlingRotation;              // Target position to interpolate to when proned.
+	/* PRONE ORIENTATION */
+	public Vector3 v3_CrawlingPosition;              // Target position to interpolate to when proned.
+	public Vector3 v3_CrawlingRotation;              // Target position to interpolate to when proned.
 
-    #endregion
+	/* RECOVERY ORIENTATION */
+	public Vector3 v3_RecoveryPosition;            // Target position to interpolate to when crouched.
+	public Vector3 v3_RecoveryRotation;            // Target rotation to interpolate to when crouched.
 
-    #region Initializer(s)
+	/* CROUCH RECOVERY ORIENTATION */
+	public Vector3 v3_CrouchRecoveryPosition;            // Target position to interpolate to when crouched.
+	public Vector3 v3_CrouchRecoveryRotation;            // Target rotation to interpolate to when crouched.
 
-    void Awake()
-    {
-        // Initialize variables.
-        t_This = transform;
-        v3_DefaultPosition = t_This.localPosition;
-        v3_DefaultRotation = t_This.localEulerAngles;
-    }
+	#endregion
 
-    void OnEnable()
-    {
-        // Register EVO_StanceStateChanged method to the event that would be fired off from RHC_EventManager.
-        // This means that the method EVO_StanceStateChanged() would be called whenever the event stanceStateChanged is fired.
-        RHC_EventManager.stanceStateChanged += EVO_StanceStateChanged;
-    }
+	#region Initializer(s)
 
-    #endregion
+	void Awake()
+	{
+		// Initialize variables.
+		t_This = transform;
+		v3_DefaultPosition = t_This.localPosition;
+		v3_DefaultRotation = t_This.localEulerAngles;
+	}
 
-    #region Coroutine(s)
+	void OnEnable()
+	{
+		// Register EVO_StanceStateChanged method to the event that would be fired off from RHC_EventManager.
+		// This means that the method EVO_StanceStateChanged() would be called whenever the event stanceStateChanged is fired.
+		RHC_EventManager.stanceStateChanged += EVO_StanceStateChanged;
+	}
 
-    /// <summary> Coroutine used for changing head orientation to corresponding state. </summary>
-    IEnumerator CO_ChangeState(Vector3 targetPos, Vector3 targetRot, bool wasOnAirBefore)
-    {
-        // If we had jumped before, meaning if this instance of the coroutine is called when "landed". Interpolate to AirDown orientation first.
-        if (wasOnAirBefore)
-        {
-            // Declare & init variables.
-            float k = 0.0f;
-            float l = 0.0f;
-            Vector3 currentPos = t_This.localPosition;
-            Quaternion currentRot = t_This.localRotation;
+	#endregion
 
-            // Interpolate.
-            while (k < 1.0f || l < 1.0f)
-            {
-                k += Time.deltaTime * f_GoDownFromAirPosSpeed;
-                l += Time.deltaTime * f_GoDownFromAirRotSpeed;
+	#region Coroutine(s)
 
-                t_This.localPosition = Vector3.Lerp(currentPos, v3_AirDownPosition, k);
-                t_This.localRotation = Quaternion.Slerp(currentRot, Quaternion.Euler(v3_AirDownRotation), l);
-                yield return null;
-            }
-        }
+	/// <summary> Coroutine used for changing head orientation to corresponding state. </summary>
+	IEnumerator CO_ChangeState(Vector3 targetPos, Vector3 targetRot, bool wasOnAirBefore)
+	{
+		// If we had jumped before, meaning if this instance of the coroutine is called when "landed". Interpolate to AirDown orientation first.
+		if (wasOnAirBefore)
+		{
+			// Declare & init variables.
+			float k = 0.0f;
+			float l = 0.0f;
+			Vector3 currentPos = t_This.localPosition;
+			Quaternion currentRot = t_This.localRotation;
 
-        // Record the target orientation.
-        Vector3 targetPosition = targetPos;
-        Vector3 targetRotation = targetRot;
+			// Interpolate.
+			while (k < 1.0f || l < 1.0f)
+			{
+				k += Time.deltaTime * f_GoDownFromAirPosSpeed;
+				l += Time.deltaTime * f_GoDownFromAirRotSpeed;
 
-        float i = 0.0f;
-        float j = 0.0f;
+				t_This.localPosition = Vector3.Lerp(currentPos, v3_AirDownPosition, k);
+				t_This.localRotation = Quaternion.Slerp(currentRot, Quaternion.Euler(v3_AirDownRotation), l);
+				yield return null;
+			}
+		}
 
-        // Record the current orientation.
-        Vector3 currentPosition = t_This.localPosition;
-        Quaternion currentRotation = t_This.localRotation;
+		// Record the target orientation.
+		Vector3 targetPosition = targetPos;
+		Vector3 targetRotation = targetRot;
 
-        // Interpolate to the target orientation.
-        while (i < 1.0f || j < 1.0f)
-        {
-            i += Time.deltaTime * f_PosInterpolationSpeed;
-            j += Time.deltaTime * f_RotInterpolationSpeed;
+		float i = 0.0f;
+		float j = 0.0f;
 
-            t_This.localPosition = Vector3.Lerp(currentPosition, targetPosition, i);
-            t_This.localRotation = Quaternion.Slerp(currentRotation, Quaternion.Euler(targetRotation), j);
-            yield return null;
-        }
-    }
+		// Record the current orientation.
+		Vector3 currentPosition = t_This.localPosition;
+		Quaternion currentRotation = t_This.localRotation;
 
-    #endregion
+		// Interpolate to the target orientation.
+		while (i < 1.0f || j < 1.0f)
+		{
+			i += Time.deltaTime * f_PosInterpolationSpeed;
+			j += Time.deltaTime * f_RotInterpolationSpeed;
 
-    #region ExternallySet
+			t_This.localPosition = Vector3.Lerp(currentPosition, targetPosition, i);
+			t_This.localRotation = Quaternion.Slerp(currentRotation, Quaternion.Euler(targetRotation), j);
+			yield return null;
+		}
+	}
 
-    /// <summary> This method is called whenever stanceStateChanged event is fired from RHC_EventManager. </summary>
-    void EVO_StanceStateChanged(RHC_EventManager.StanceState changedTo)
-    {
-        // If a change state coroutine is currently present, stop it so that we can start a new one according to the target state.
-        if (co_ChangeState != null)
-            StopCoroutine(co_ChangeState);
+	#endregion
 
-        // Check the target state, set b_WasAired variable accordingly and call the coroutine for interpolating the head orientation.
-        if (changedTo == RHC_EventManager.StanceState.Standing)
-        {
-            co_ChangeState = StartCoroutine(CO_ChangeState(v3_DefaultPosition, v3_DefaultRotation, b_WasAired));
-            b_WasAired = false;
-        }
-        else if (changedTo == RHC_EventManager.StanceState.Crouching)
-        {
-            co_ChangeState = StartCoroutine(CO_ChangeState(v3_CrouchingPosition, v3_CrouchingRotation, b_WasAired));
-            b_WasAired = false;
-        }
-        else if (changedTo == RHC_EventManager.StanceState.Crawling)
-        {
-            co_ChangeState = StartCoroutine(CO_ChangeState(v3_CrawlingPosition, v3_CrawlingRotation, b_WasAired));
-            b_WasAired = false;
-        }
-        else if (changedTo == RHC_EventManager.StanceState.OnAir)
-        {
-            co_ChangeState = StartCoroutine(CO_ChangeState(v3_AirPosition, v3_AirRotation, false));
-            b_WasAired = true;
-        }
-    }
+	#region ExternallySet
 
-    #endregion
+	/// <summary> This method is called whenever stanceStateChanged event is fired from RHC_EventManager. </summary>
+	void EVO_StanceStateChanged(RHC_EventManager.StanceState changedTo)
+	{
+		// If a change state coroutine is currently present, stop it so that we can start a new one according to the target state.
+		if (co_ChangeState != null)
+			StopCoroutine(co_ChangeState);
 
-    #region Finalizer(s)
+		// Check the target state, set b_WasAired variable accordingly and call the coroutine for interpolating the head orientation.
+		if (changedTo == RHC_EventManager.StanceState.Standing)
+		{
+			co_ChangeState = StartCoroutine(CO_ChangeState(v3_DefaultPosition, v3_DefaultRotation, b_WasAired));
+			b_WasAired = false;
+		}
+		else if (changedTo == RHC_EventManager.StanceState.Crouching)
+		{
+			co_ChangeState = StartCoroutine(CO_ChangeState(v3_CrouchingPosition, v3_CrouchingRotation, b_WasAired));
+			b_WasAired = false;
+		}
+		else if (changedTo == RHC_EventManager.StanceState.Recovering)
+		{
+			co_ChangeState = StartCoroutine(CO_ChangeState(v3_RecoveryPosition, v3_RecoveryRotation, b_WasAired));
+			b_WasAired = false;
+		}
+		else if (changedTo == RHC_EventManager.StanceState.CrouchRecovering)
+		{
+			co_ChangeState = StartCoroutine(CO_ChangeState(v3_CrouchRecoveryPosition, v3_CrouchRecoveryRotation, b_WasAired));
+			b_WasAired = false;
+		}
+		else if (changedTo == RHC_EventManager.StanceState.OnAir)
+		{
+			co_ChangeState = StartCoroutine(CO_ChangeState(v3_AirPosition, v3_AirRotation, false));
+			b_WasAired = true;
+		}
+	}
 
-    void OnDisable()
-    {
-        // Make sure that no coroutine objects are yielding when this component is disabled.
-        StopAllCoroutines();
+	#endregion
 
-        // Unsubscribe listener method from the state change event in RHC_EventManager.
-        RHC_EventManager.stanceStateChanged -= EVO_StanceStateChanged;
-    }
+	#region Finalizer(s)
 
-    #endregion
+	void OnDisable()
+	{
+		// Make sure that no coroutine objects are yielding when this component is disabled.
+		StopAllCoroutines();
+
+		// Unsubscribe listener method from the state change event in RHC_EventManager.
+		RHC_EventManager.stanceStateChanged -= EVO_StanceStateChanged;
+	}
+
+	#endregion
 }

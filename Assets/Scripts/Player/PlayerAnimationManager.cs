@@ -16,8 +16,22 @@ public class PlayerAnimationManager : MonoBehaviour {
 
 	internal void ResetAnimatorParameters()
 	{
-		SetAnimationBool(AnimationCodes.BasicAttacking, false);
-		SetAnimationBool(AnimationCodes.Grappling, false);
+		SetAnimationBool(AnimationCodes.Blocking, false);
+		SetAnimationBool(AnimationCodes.ChargingAttack, false);
+		SetAnimationBool(AnimationCodes.JumpKicking, false);
+		SetAnimationBool(AnimationCodes.SlideKicking, false);
+		ResetAnimationSpeed();
+	}
+
+	internal void ResetAnimationSpeed()
+	{
+		if (PlayerAnimator != null)
+			PlayerAnimator.speed = 1;
+	}
+
+	internal void ChangeAnimationSpeed(float multiplier)
+	{
+		PlayerAnimator.speed = multiplier;
 	}
 
 	#region Setters
@@ -41,29 +55,36 @@ public class PlayerAnimationManager : MonoBehaviour {
 		SetAnimationBool(AnimationCodes.Sliding, value);
 	}
 
-	internal void SetHanging(bool value)
+	internal void ChargeUpAttack()
 	{
-		SetAnimationBool(AnimationCodes.Hanging, value);
+		SetAnimationBool(AnimationCodes.ChargingAttack, true);
 	}
 
-	internal void SetClimbingUp(bool value)
+	internal void ExecuteBasicAttack()
 	{
-		SetAnimationBool(AnimationCodes.ClimbingUp, value);
+		SetAnimationBool(AnimationCodes.ChargingAttack, false);
+		SetAnimationInteger(AnimationCodes.BasicAttackIndex, UnityEngine.Random.Range(0, 2));
 	}
 
-	internal void SetVaulting(bool value)
+	internal void ExecuteChargeAttack() //TODO - Make a charged attack animation
 	{
-		SetAnimationBool(AnimationCodes.Vaulting, value);
+		SetAnimationBool(AnimationCodes.ChargingAttack, false);
+		SetAnimationInteger(AnimationCodes.BasicAttackIndex, UnityEngine.Random.Range(0, 2));
 	}
 
-	internal void SetSteppingUp(bool value)
+	internal void ExecuteBlock()
 	{
-		SetAnimationBool(AnimationCodes.SteppingUp, value);
+		SetAnimationBool(AnimationCodes.Blocking, true);
 	}
 
-	internal void ExecuteGrapple()
+	internal void ExecuteJumpKick()
 	{
-		SetAnimationBool(AnimationCodes.Grappling, true);
+		SetAnimationBool(AnimationCodes.JumpKicking, true);
+	}
+
+	internal void ExecuteSlideKick()
+	{
+		SetAnimationBool(AnimationCodes.SlideKicking, true);
 	}
 	#endregion
 
@@ -101,7 +122,10 @@ public class PlayerAnimationManager : MonoBehaviour {
 		public const string Vaulting = "Vaulting";
 		public const string SteppingUp = "SteppingUp";
 
-		public const string BasicAttacking = "BasicAttacking";
-		public const string Grappling = "Grappling";
+		public const string Blocking = "Blocking";
+		public const string ChargingAttack = "ChargingAttack";
+		public const string BasicAttackIndex = "BasicAttackIndex";
+		public const string JumpKicking = "JumpKicking";
+		public const string SlideKicking = "SlideKicking";
 	}
 }

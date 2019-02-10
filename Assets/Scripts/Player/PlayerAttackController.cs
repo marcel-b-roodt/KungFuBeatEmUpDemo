@@ -43,6 +43,7 @@ public class PlayerAttackController : MonoBehaviour
 
 	private PlayerMovementState MovementState { get { return playerMovementController.CurrentPlayerState; } }
 	private float TimeSinceEnteringMovementState { get { return playerMovementController.TimeSinceEnteringState; } }
+	private bool IsRecovering { get { return playerMovementController.FallRecoveryStatus != FallRecoveryStatus.Default; } }
 
 	void Awake()
 	{
@@ -74,6 +75,45 @@ public class PlayerAttackController : MonoBehaviour
 					playerAnimationManager.ResetAnimatorParameters();
 					break;
 				}
+			case PlayerAttackState.Blocking:
+				{
+					blockInputHandled = true;
+					//playerAnimationManager.ExecuteBlock();
+					break;
+				}
+			case PlayerAttackState.BasicAttacking:
+				{
+					//playerAnimationManager.ExecuteBasicAttack();
+					playerAttackManager.BasicAttack(); //Move this to a connecting frame in the animation
+					break;
+				}
+			case PlayerAttackState.ChargingAttack:
+				{
+					//playerAnimationManager.ChargeUpAttack();
+					attackChargePercentage = 0f;
+					break;
+				}
+			case PlayerAttackState.ChargeAttacking:
+				{
+					if (attackChargePercentage >= ChargeAttackLungeMinimumChargePercentage)
+					{
+						//if (playerMovementStateMachine.InCrouchingState)
+						//	playerMovementStateMachine.CrouchLunge();
+						//else
+						//	playerMovementStateMachine.Lunge();
+					}
+
+					//playerAnimationManager.ExecuteChargeAttack();
+					break;
+				}
+			case PlayerAttackState.JumpKicking:
+				{
+					break;
+				}
+			case PlayerAttackState.SlideKicking:
+				{
+					break;
+				}
 		}
 	}
 
@@ -93,25 +133,26 @@ public class PlayerAttackController : MonoBehaviour
 		{
 			case PlayerAttackState.Idle:
 				{
-
-					if (inputs.PrimaryFire)
+					if (!IsRecovering)
 					{
-						if (MovementState == PlayerMovementState.Sliding && TimeSinceEnteringMovementState <= SlideKickAllowanceTime)
+						if (inputs.PrimaryFire)
 						{
-							TransitionToState(PlayerAttackState.SlideKicking);
+							if (MovementState == PlayerMovementState.Sliding && TimeSinceEnteringMovementState <= SlideKickAllowanceTime)
+							{
+								TransitionToState(PlayerAttackState.SlideKicking);
+							}
+						}
+
+						if (inputs.SecondaryFire)
+						{
+
+						}
+
+						if (inputs.Interact)
+						{
+
 						}
 					}
-
-					if (inputs.SecondaryFire)
-					{
-
-					}
-
-					if (inputs.Interact)
-					{
-
-					}
-
 					break;
 				}
 		}
@@ -167,9 +208,6 @@ public class PlayerAttackController : MonoBehaviour
 	//	#region Idle
 	//	void Idle_SuperUpdate()
 	//	{
-	//		if (playerMovementStateMachine.IsRecovering)
-	//			return;
-
 	//		if (playerInputManager.Current.PrimaryFireInput)
 	//		{
 	//			Attack();
@@ -191,12 +229,6 @@ public class PlayerAttackController : MonoBehaviour
 	//	#endregion
 
 	//	#region Blocking
-	//	void Blocking_EnterState()
-	//	{
-	//		blockInputHandled = true;
-	//		playerAnimationManager.ExecuteBlock();
-	//	}
-
 	//	void Blocking_SuperUpdate()
 	//	{
 	//		if (TimeSinceEnteringCurrentState >= BlockMotionTime)
@@ -205,15 +237,9 @@ public class PlayerAttackController : MonoBehaviour
 	//			return;
 	//		}
 	//	}
-
 	//	#endregion
 
 	//	#region BasicAttacking
-	//	void BasicAttacking_EnterState()
-	//	{
-	//		playerAnimationManager.ExecuteBasicAttack();
-	//		playerAttackManager.BasicAttack(); //Move this to a connecting frame in the animation
-	//	}
 
 	//	void BasicAttacking_SuperUpdate()
 	//	{
@@ -226,12 +252,6 @@ public class PlayerAttackController : MonoBehaviour
 	//	#endregion
 
 	//	#region ChargingAttack
-	//	void ChargingAttack_EnterState()
-	//	{
-	//		playerAnimationManager.ChargeUpAttack();
-	//		attackChargePercentage = 0f;
-	//	}
-
 	//	void ChargingAttack_SuperUpdate()
 	//	{
 	//		attackChargePercentage = Mathf.Min(TimeSinceEnteringCurrentState / AttackFullyChargedMotionTime, 1f);
@@ -259,19 +279,6 @@ public class PlayerAttackController : MonoBehaviour
 	//	#endregion
 
 	//	#region ChargeAttacking
-	//	void ChargeAttacking_EnterState()
-	//	{
-	//		if (attackChargePercentage >= ChargeAttackLungeMinimumChargePercentage)
-	//		{
-	//			if (playerMovementStateMachine.InCrouchingState)
-	//				playerMovementStateMachine.CrouchLunge();
-	//			else
-	//				playerMovementStateMachine.Lunge();
-	//		}
-
-	//		playerAnimationManager.ExecuteChargeAttack();
-	//	}
-
 	//	void ChargeAttacking_SuperUpdate()
 	//	{
 	//		if (TimeSinceEnteringCurrentState >= ChargeAttackMotionTime && (PlayerMovementState)playerMovementStateMachine.CurrentState != PlayerMovementState.Lunging)

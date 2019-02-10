@@ -199,10 +199,12 @@ MonoBehaviour:
   AirAccelerationSpeed: 3
   Drag: 0.1
   AllowJumpingWhenSliding: 1
-  JumpSpeed: 6
   JumpPreGroundingGraceTime: 0
   JumpPostGroundingGraceTime: 0
-  JumpRecoveryTime: 0.05
+  FallRecoveryThreshold: 2.9899998
+  FallCrouchRecoveryThreshold: 3.3799996
+  FallRecoveryTime: 0.15
+  FallCrouchRecoveryTime: 0.25
   SlideVelocityThreshold: 2
   SlideRotationSpeed: 1.25
   SlideSpeed: 10
@@ -918,3 +920,7 @@ MonoBehaviour:
   v3_CrouchingRotation: {x: 0, y: 0, z: 345}
   v3_CrawlingPosition: {x: 0, y: -1.2, z: 0}
   v3_CrawlingRotation: {x: -0, y: 0, z: 0}
+  v3_RecoveryPosition: {x: 0, y: 0, z: 0}
+  v3_RecoveryRotation: {x: 0, y: 0, z: 0}
+  v3_CrouchRecoveryPosition: {x: 0, y: 0, z: 0}
+  v3_CrouchRecoveryRotation: {x: 0, y: 0, z: 0}
