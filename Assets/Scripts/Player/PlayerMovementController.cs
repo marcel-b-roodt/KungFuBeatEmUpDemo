@@ -6,6 +6,7 @@ public enum PlayerMovementState
 {
 	Default,
 	Sliding,
+	Lunging
 }
 
 public enum FallRecoveryStatus
@@ -80,12 +81,19 @@ public class PlayerMovementController : BaseCharacterController
 	private bool _isCrouching = false;
 	private bool _isWalking = false;
 
+	private float _timeLeftStableGround;
+
 	private Player.PlayerInputs _bufferedInputs;
 
 	private PlayerAttackController playerAttackController;
 	private PlayerAnimationManager playerAnimationManager;
 
 	public bool IsGrounded { get { return Motor.GroundingStatus.IsStableOnGround; } }
+	public float TimeSinceGrounded { get { return IsGrounded ? 0 : Time.time - _timeLeftStableGround; } }
+	public bool IsCrouching { get { return _isCrouching; } }
+	public bool IsRecovering { get { return FallRecoveryStatus != FallRecoveryStatus.Default; } }
+	public bool MustWalk { get { return playerAttackController.CurrentPlayerState == PlayerAttackState.ChargingAttack; } }
+	public bool LocalMovementIsForwardFacing { get { return _bufferedInputs.MoveAxisForward > 0; } }
 
 	private void Start()
 	{
@@ -195,7 +203,7 @@ public class PlayerMovementController : BaseCharacterController
 						}
 					}
 
-					if (inputs.Walk)
+					if (inputs.Walk || MustWalk)
 						_isWalking = true;
 					else
 						_isWalking = false;
@@ -407,7 +415,7 @@ public class PlayerMovementController : BaseCharacterController
 						Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
 						Vector3 reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized * _moveInputVector.magnitude;
 
-						// When sliding, velocity is always constant
+						// When starting to slide, set velocity to max
 						if (_startedSlide)
 						{
 							currentVelocity = _currentSlideVelocity;
@@ -467,7 +475,7 @@ public class PlayerMovementController : BaseCharacterController
 							_timeSinceLastAbleToJump += deltaTime;
 						}
 
-						if (FallRecoveryStatus != FallRecoveryStatus.Default)
+						if (IsRecovering)
 						{
 							switch (FallRecoveryStatus)
 							{
@@ -612,6 +620,8 @@ public class PlayerMovementController : BaseCharacterController
 
 	protected void OnLeaveStableGround()
 	{
+		_timeLeftStableGround = Time.time;
+
 		switch (CurrentPlayerState)
 		{
 			case PlayerMovementState.Default:
